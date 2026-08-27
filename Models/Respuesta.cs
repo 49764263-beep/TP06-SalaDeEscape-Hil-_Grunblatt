@@ -8,7 +8,7 @@ namespace SalaDeEscape.Models
         public int IDRespuesta { get; set; }
         public int SalaID { get; set; }
         public int PartidaID { get; set; }
-        public string Respuesta { get; set; }
+        public string TextoRespuesta { get; set; }
         public bool Acertada { get; set; }
     }
 }

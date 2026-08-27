@@ -51,7 +51,7 @@ public class HomeController : Controller
     //Crea un metodo para redirigirce a la vista de juego, en donde pueda verificar en que sala se quede y mandarlo a una de ls 5 salas, mediante el uso de Session, y si no hay session, que lo mande a la sala 1.
     public IActionResult Juego()
     {
-        int salaActual = HttpContext.Session.GetInt32("SalaActual");
+        int salaActual = HttpContext.Session.GetInt32("SalaActual") ?? 1;
         switch (salaActual)
         {
             case 1:
@@ -76,7 +76,7 @@ public class HomeController : Controller
         string respuestaCorrecta = "El León Cobarde";
         if (respuesta.Equals(respuestaCorrecta, StringComparison.OrdinalIgnoreCase))
         {
-            int salaActual = HttpContext.Session.GetInt32("SalaActual");
+            int salaActual = HttpContext.Session.GetInt32("SalaActual") ?? 1;
             salaActual++;
             HttpContext.Session.SetInt32("SalaActual", salaActual);
             return RedirectToAction("Juego");
