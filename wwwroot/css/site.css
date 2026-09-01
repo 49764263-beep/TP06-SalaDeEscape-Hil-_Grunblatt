@@ -29,3 +29,82 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+body {
+    background-color: #f4f6f9;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.text-center {
+    max-width: 800px;
+    margin: 4%;
+    background-color: white;
+    padding: 5%;
+    border-radius: 2%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 2%;
+}
+
+h3 {
+    color: #555;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 3%;
+}
+
+#PalabraOculta {
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    color: #34495e;
+    margin: 2%;
+    padding-right: 2%;
+}
+
+#Intentos, #LetrasFallidas {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e74c3c;
+    min-height: 1.5em;
+    margin-bottom: 3%;
+}
+
+#Letra, form input {
+    width: 15%;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1.8%;
+    border: 0.1em solid #3498db;
+    border-radius: 0.4em;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 3% 4%;
+    font-size: 1.2em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    margin-left: 2%;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#Rta {
+    margin-top: 7%;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+form{
+  margin-top: 1%;
+}

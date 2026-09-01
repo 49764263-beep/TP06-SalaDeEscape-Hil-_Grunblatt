@@ -20,7 +20,7 @@ public class HomeController : Controller
 
     // Crea un metodo para verificar los datos del usuario, que al recivir el nombredeUsuario, revise que en la base de datos exista, y si no existe, cree una nueva partida con el nombre de usuario y la fecha actual, y redirija a la vista de Juego, si existe, que le permite cargar sus datos ya guardados, utilizando la funcion de BD.VerificarUsuario y BD.CrearPartida, tambien, que pueda regresar a la sala que se haya guardado una vez que comendo o cuando cierra sesion, guardando solo lo nesesario mediante el uso de Session.
     [HttpPost]
-    public IActionResult VerificarDatos(string nombreUsuario)
+    public IActionResult VerificarDatos(string nombreUsuario, int IDPartida)
     {
         BD bd = new BD();
         if (bd.VerificarUsuario(nombreUsuario))
@@ -68,6 +68,15 @@ public class HomeController : Controller
                 return RedirectToAction("Sala1");
         }
     }
+
+    public IActionResult Sala1()
+    {
+        Palabras palabra = new Palabras();
+        ViewBag.Palabra = palabra.ObtenerPalabra();
+        ViewBag.PalabraOculta = palabra.PalabraAGuion(ViewBag.Palabra);
+        return View();
+    }
+
 
     // Crea el metodo de verificar la respuesta del usuario, que reciba la respuesta del usuario y la compare con la respuesta correcta, si es correcta, que lo mande a la siguiente sala, y si no es correcta, que le muestre un mensaje de error y lo mantenga en la misma sala.
     [HttpPost]

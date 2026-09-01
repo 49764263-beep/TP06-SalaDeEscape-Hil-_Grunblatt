@@ -2,7 +2,8 @@
     <h1>Bienvenido al maravilloso Mundo de Oz</h1>
     <p>Ingresa tu nombre de usuario para comenzar</p>
     <form action='@Url.Action("VerificarDatos", "Home")' method='POST'>
-        <input type="text" placeholder="Nombre de usuario" name="nombreUsuario" required/>
+        <input type="hidden" name="IDPartida" value="0" />
+        <input type="text" placeholder="Nombre de usuario" name="NombreUsuario" required/>
         <button type="submit">Iniciar Sesión</button>
     </form>
 </div>

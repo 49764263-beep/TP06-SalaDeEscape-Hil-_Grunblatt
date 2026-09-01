@@ -1,10 +1,22 @@
-// Crea la sala 1, donde el usuario debe resolver un acertijo para poder avanzar a la siguiente sala. Obviamente pensando en que la sala esta tematizada en el mundo de Oz, el acertijo tiene que ver con la historia de este mundo. El acertijo es el siguiente: "¿Qué personaje de la historia de Oz es conocido por su valentía y su corazón valiente?" Al principio que le aparesca un pequeño texto que le muestre un poco la historia, por si es que no la conoce. El usuario debe ingresar la respuesta correcta para poder avanzar a la siguiente sala.
 <div class="Sala1">
     <h1>Bienvenido a la Sala 1</h1>
     <p>En el maravilloso mundo de Oz, hay muchos personajes valientes y con un gran corazón. Uno de ellos es conocido por su valentía y su corazón valiente. ¿Sabes quién es?</p>
-    /* hacer un div para cada personaje con su imagen y su nombre, para que el usuario pueda elegir la respuesta correcta. */
-    <form action='@Url.Action("VerificarRespuesta", "Home")' method="post">
-        <input type="text" name="respuesta" placeholder="Ingresa tu respuesta" required/>
-        <button type="submit">Verificar Respuesta</button>
-    </form>  
 <div>
+
+<section class="text-center">
+    <div>
+        <h1 class="display-4">EL AHORCADO</h1>
+        <h3>Se va a elegir aleatoriamente una palabra. Hay un guión por cada letra de la palabra secreta. Ingresá una letra que creas que está en la palabra secreta y el sistema te va a decir si está o no. Adiviná la palabra antes de los 10 intentos (fallidos).</h3>
+    </div>
+    <div>
+        <input type="hidden" id="Palabra" value="@ViewBag.Palabra"></input>
+        <p>Letras fallidas:</p>
+        <div id ="LetrasFallidas"></div>
+        <p>Intentos faltantes:</p>
+        <div id ="Intentos">10</div>
+        <h2 id="PalabraOculta">@ViewBag.PalabraOculta</h2>
+        <input type ="text" id ="Letra" maxlength ="1">
+        <button onclick="arriesgarLetra()">Arriesgar</button>
+        <div id="Rta"></div>
+    </div>
+</section>
