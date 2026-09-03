@@ -97,7 +97,54 @@ public class HomeController : Controller
         }
     }
 
-    
+    [HttpPost]
+    public IActionResult AvanzarSala()
+    {
+        int salaActual = HttpContext.Session.GetInt32("SalaActual") ?? 1;
+        salaActual++;
+        HttpContext.Session.SetInt32("SalaActual", salaActual);
+
+        string nombreUsuario = HttpContext.Session.GetString("NombreUsuario");
+        if (!string.IsNullOrEmpty(nombreUsuario))
+        {
+            BD bd = new BD();
+            bd.ActualizarSala(nombreUsuario, salaActual);
+        }
+
+        return RedirectToAction("Juego");
+    }
+
+    public IActionResult Sala2()
+    {
+        int salaActual = HttpContext.Session.GetInt32("SalaActual") ?? 1;
+        if (salaActual < 2) return RedirectToAction("Juego");
+
+        return View();
+    }
+
+    public IActionResult Sala3()
+    {
+        int salaActual = HttpContext.Session.GetInt32("SalaActual") ?? 1;
+        if (salaActual < 3) return RedirectToAction("Juego");
+
+        return View();
+    }
+
+    public IActionResult Sala4()
+    {
+        int salaActual = HttpContext.Session.GetInt32("SalaActual") ?? 1;
+        if (salaActual < 4) return RedirectToAction("Juego");
+
+        return View();
+    }
+
+    public IActionResult Sala5()
+    {
+        int salaActual = HttpContext.Session.GetInt32("SalaActual") ?? 1;
+        if (salaActual < 5) return RedirectToAction("Juego");
+
+        return View();
+    }
 
     public IActionResult Privacy()
     {

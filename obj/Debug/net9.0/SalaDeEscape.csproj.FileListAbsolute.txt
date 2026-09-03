@@ -66,9 +66,7 @@ Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\rjsmcshtml.dswa.cache.
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\scopedcss\bundle\SalaDeEscape.styles.css
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\scopedcss\projectbundle\SalaDeEscape.bundle.scp.css
-Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\compressed\bmefsl66bm-b9sayid5wm.gz
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\compressed\uqgxsq75cd-61n19gt1b8.gz
-Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\compressed\fj6j4nc8ay-xtxxf3hu2r.gz
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\compressed\lm9rh7x7xm-bqjiyaj88i.gz
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\compressed\x5tcid0k3z-c2jlpeoesf.gz
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\compressed\51pem38e87-erw9l3u2r3.gz
@@ -140,3 +138,5 @@ Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\refint\SalaDeEscape.dl
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\SalaDeEscape.pdb
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\SalaDeEscape.genruntimeconfig.cache
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\ref\SalaDeEscape.dll
+Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\compressed\bmefsl66bm-xl1ew6z32p.gz
+Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\compressed\fj6j4nc8ay-laztddeuiy.gz

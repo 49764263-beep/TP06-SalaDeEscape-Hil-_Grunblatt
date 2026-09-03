@@ -108,3 +108,41 @@ button:hover {
 form{
   margin-top: 1%;
 }
+
+
+.simon-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.btn-simon {
+    width: 130px;
+    height: 130px;
+    border-radius: 15px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-simon:active {
+    transform: scale(0.95);
+}
+
+.verde { background-color: #2ecc71; }
+.rojo { background-color: #e74c3c; }
+.amarillo { background-color: #f1c40f; }
+.azul { background-color: #3498db; }
+
+.activo {
+    opacity: 1 !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+}
+
+#pantalla-nivel {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 10px;
+}

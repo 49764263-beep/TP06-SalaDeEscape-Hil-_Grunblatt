@@ -18,5 +18,10 @@
         <input type ="text" id ="Letra" maxlength ="1">
         <button onclick="arriesgarLetra()">Arriesgar</button>
         <div id="Rta"></div>
+
+        //Crear un formulario oculto que se muestre cuando el usuario complete la sala 2, y que al hacer click en el boton, llame a la accion AvanzarSala del controlador Home, y que tenga un boton con el texto "Ir a la Sala 2", y que tenga un estilo de color verde.
+        <form id="formSiguienteSala" action='@Url.Action("AvanzarSala", "Home")' method="POST">
+            <button type="submit" style="background-color: #27ae60;">Ir a la Sala 2</button>
+        </form>
     </div>
 </section>

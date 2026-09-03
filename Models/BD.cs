@@ -56,5 +56,13 @@ public class BD
         }
     }
 
-
+    // Crea un metodo para que la sala actual se actualice para que el usuario complete la primera sala, que vaya a la nueva sala. El nombre del metodo es ActualizarSala, y recibe el nombre de usuario y la sala actual, y actualiza la sala actual en la base de datos.
+    public void ActualizarSala(string nombreUsuario, int salaActual)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "UPDATE Partida SET SalaActual = @SalaActual WHERE NombreUsuario = @NombreUsuario";
+            connection.Execute(query, new { NombreUsuario = nombreUsuario, SalaActual = salaActual });
+        }
+    }
 }
