@@ -1,0 +1,18 @@
+<div class="text-center">
+    <h1>Sala 3: Búsqueda oculta</h1>
+    <h3>Busca el botón escondido dentro de la imagen. Cuando lo encuentres, podrás continuar a la siguiente sala.</h3>
+
+    <div id="zona-busqueda" class="zona-busqueda">
+        <div id="zonaImagenSala3" class="zona-imagen-sala3" aria-label="Imagen de la sala 3" title="Busca el botón oculto">
+            <button type="button" id="botonOcultoSala3" class="boton-oculto-sala3" onclick="encontrarBotonSala3()">
+                Encontrar
+            </button>
+        </div>
+    </div>
+
+    <div id="mensajeSala3" class="mensaje-sala3">Busca con atención: el botón está integrado en la imagen.</div>
+
+    <form id="formSala4" action='@Url.Action("AvanzarSala", "Home")' method="POST" style="display: none;">
+        <button type="submit" style="background-color: #27ae60; color: white;">Ir a la Sala 4</button>
+    </form>
+</div>

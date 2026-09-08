@@ -48,15 +48,29 @@
     if(!palabraNueva.includes("_")) 
     {
         Rta.innerText = "GANASTE";
-        
-        // Mostrar el formulario con el boton para avanzar a la siguiente sala
-        document.getElementById("formSiguienteSala").style.display = "block";
+        validarSala1();
     }
     if(Intentos <= 0)
     {
-        Rta.innerText = "NO TENES MÁS INTENTOS"
+        Rta.innerText = "NO TENES MÁS INTENTOS";
+        document.getElementById("formSiguienteSala").style.display = "none";
     }
 }
+
+function validarSala1()
+{
+    const rta = document.getElementById("Rta").innerText.trim();
+    const form = document.getElementById("formSiguienteSala");
+
+    if (rta === "GANASTE") {
+        form.style.display = "block";
+        return true;
+    }
+
+    form.style.display = "none";
+    return false;
+}
+
 
 const colores = ['verde', 'rojo', 'amarillo', 'azul'];
 let patron = [];
