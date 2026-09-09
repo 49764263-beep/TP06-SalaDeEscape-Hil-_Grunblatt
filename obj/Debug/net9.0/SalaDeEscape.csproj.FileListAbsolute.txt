@@ -139,4 +139,4 @@ Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\SalaDeEscape.pdb
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\SalaDeEscape.genruntimeconfig.cache
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\ref\SalaDeEscape.dll
 Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\compressed\bmefsl66bm-e16kb96jjc.gz
-Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\compressed\fj6j4nc8ay-uymcq1chfg.gz
+Z:\2026\Programación\TP-06\SalaDeEscape\obj\Debug\net9.0\compressed\fj6j4nc8ay-mcqtggll5a.gz

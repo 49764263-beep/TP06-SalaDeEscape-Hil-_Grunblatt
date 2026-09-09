@@ -77,26 +77,6 @@ public class HomeController : Controller
         return View();
     }
 
-
-    // Crea el metodo de verificar la respuesta del usuario, que reciba la respuesta del usuario y la compare con la respuesta correcta, si es correcta, que lo mande a la siguiente sala, y si no es correcta, que le muestre un mensaje de error y lo mantenga en la misma sala.
-    [HttpPost]
-    public IActionResult VerificarRespuesta(string respuesta)
-    {
-        string respuestaCorrecta = "El León Cobarde";
-        if (respuesta.Equals(respuestaCorrecta, StringComparison.OrdinalIgnoreCase))
-        {
-            int salaActual = HttpContext.Session.GetInt32("SalaActual") ?? 1;
-            salaActual++;
-            HttpContext.Session.SetInt32("SalaActual", salaActual);
-            return RedirectToAction("Juego");
-        }
-        else
-        {
-            ViewBag.MensajeError = "Respuesta incorrecta. Intenta de nuevo.";
-            return View("Sala1");
-        }
-    }
-
     [HttpPost]
     public IActionResult AvanzarSala()
     {

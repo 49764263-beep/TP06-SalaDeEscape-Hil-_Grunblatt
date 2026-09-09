@@ -146,3 +146,9 @@ form{
     font-weight: bold;
     margin-top: 10px;
 }
+
+.boton-oculto-sala3{
+    color: transparent;
+    background-color: transparent;
+}
+

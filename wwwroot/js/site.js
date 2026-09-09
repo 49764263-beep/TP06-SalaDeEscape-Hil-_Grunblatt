@@ -147,3 +147,12 @@ function presionarColor(color) {
         setTimeout(siguienteRonda, 1000);
     }
 }
+
+// Crea una funcion que verifique que el boton que esta oculto en la sala 3 haya sido precionado y que luego haga apaarecer el boton de la siguiente sala y el mensaje de que se encontro el boton.
+function encontrarBotonSala3() {
+    document.getElementById("mensajeSala3").innerText = "¡FELICIDADES! ENCONTRASTE EL BOTÓN OCULTO";
+    document.getElementById("mensajeSala3").style.color = "#27ae60";
+    document.getElementById("formSiguienteSala4").style.display = "block";
+}
+
+
