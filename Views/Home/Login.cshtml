@@ -1,0 +1,11 @@
+<div class="pantalla login">
+    <div class="caja">
+        <p class="subtitulo">LA AVENTURA COMIENZA</p>
+        <h1>¿CÓMO TE LLAMÁS?</h1>
+        <p>Ingresá tu nombre para comenzar o continuar tu partida.</p>
+        <form action='@Url.Action("VerificarDatos", "Home")' method="POST">
+            <input type="text" name="nombreUsuario" placeholder="Tu nombre" maxlength="50" required />
+            <button class="boton" type="submit">Entrar a Oz</button>
+        </form>
+    </div>
+</div>

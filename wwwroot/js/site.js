@@ -1,158 +1,135 @@
-﻿﻿function arriesgarLetra()
-{
-    if(document.getElementById("Rta").innerText == "GANASTE" || document.getElementById("Rta").innerText == "NO TENES MÁS INTENTOS")
-    {
-        return;
-    }
-
+﻿﻿// ==================== SALA 1: AHORCADO ====================
+function arriesgarLetra() {
     let letra = document.getElementById("Letra").value.toUpperCase();
     let palabra = document.getElementById("Palabra").value;
     let palabraOculta = document.getElementById("PalabraOculta");
-    let palabraNueva = "";
-    let Rta = document.getElementById("Rta");
-    let LetrasFallidas = document.getElementById("LetrasFallidas");
-    let letrasFallidas = LetrasFallidas.innerText;
-    let Intentos = parseInt(document.getElementById("Intentos").innerText);
+    let respuesta = document.getElementById("Rta");
+    let letrasFallidas = document.getElementById("LetrasFallidas").innerText;
+    let intentos = parseInt(document.getElementById("Intentos").innerText);
 
-    if(letrasFallidas.includes(letra) || palabraNueva.includes(letra))
-    {
-        return;
-    }
-    if(palabra.includes(letra))
-    {
-        for(let i = 0; i < palabra.length; i++)
-        {
-            if(palabra[i] == letra)
-            {
+    if (respuesta.innerText == "¡GANASTE!") return;
+    if (intentos <= 0) return;
+    if (letra == "") return;
+
+    let palabraNueva = "";
+
+    if (palabra.includes(letra)) {
+        for (let i = 0; i < palabra.length; i++) {
+            if (palabra[i] == letra) {
                 palabraNueva += letra;
-            } 
-            else if(palabraOculta.innerText[i] != "_")
-            {
+            } else if (palabraOculta.innerText[i] != "_") {
                 palabraNueva += palabraOculta.innerText[i];
-            } 
-            else
-            {
+            } else {
                 palabraNueva += "_";
             }
         }
         palabraOculta.innerText = palabraNueva;
-    } 
-    else
-    {
-        Intentos--;
-        palabraNueva = palabraOculta.innerText;
-        letrasFallidas += letra + " ";
-        LetrasFallidas.innerText = letrasFallidas;
-        document.getElementById("Intentos").innerText = Intentos;
-    }
-    if(!palabraNueva.includes("_")) 
-    {
-        Rta.innerText = "GANASTE";
-        validarSala1();
-    }
-    if(Intentos <= 0)
-    {
-        Rta.innerText = "NO TENES MÁS INTENTOS";
-        document.getElementById("formSiguienteSala").style.display = "none";
-    }
-}
-
-function validarSala1()
-{
-    const rta = document.getElementById("Rta").innerText.trim();
-    const form = document.getElementById("formSiguienteSala");
-
-    if (rta === "GANASTE") {
-        form.style.display = "block";
-        return true;
-    }
-
-    form.style.display = "none";
-    return false;
-}
-
-
-const colores = ['verde', 'rojo', 'amarillo', 'azul'];
-let patron = [];
-let patronUsuario = [];
-let nivel = 0;
-let bloqueado = true;
-
-function iniciarJuego() {
-    patron = [];
-    patronUsuario = [];
-    nivel = 0;
-    document.getElementById("btn-iniciar").style.display = "none";
-    document.getElementById("mensaje").innerText = "";
-    siguienteRonda();
-}
-
-function siguienteRonda() {
-    patronUsuario = [];
-    nivel++;
-    document.getElementById("contador").innerText = nivel - 1;
-
-    // hacer que cuando llegue a 10 victorias, muestre el botón y finalize el juego, y que el mensaje diga "¡FELICIDADES! COMPLETASTE LA SALA 2"
-    if (nivel > 10) {
-        document.getElementById("mensaje").innerText = "¡FELICIDADES! COMPLETASTE LA SALA 2";
-        document.getElementById("mensaje").style.color = "#27ae60";
-        document.getElementById("formSala3").style.display = "block";
-        bloqueado = true;
-        return;
-    }
-
-    bloqueado = true;
-    let colorRandom = colores[Math.floor(Math.random() * 4)];
-    patron.push(colorRandom);
-    ejecutarSecuencia();
-}
-
-function iluminarColor(color) {
-    let el = document.getElementById(color);
-    el.classList.add("activo");
-    setTimeout(() => el.classList.remove("activo"), 400);
-}
-
-function ejecutarSecuencia() {
-    let i = 0;
-    let interval = setInterval(() => {
-        iluminarColor(patron[i]);
-        i++;
-        if (i >= patron.length) {
-            clearInterval(interval);
-            bloqueado = false;
+    } else {
+        if (letrasFallidas != "Ninguna" && letrasFallidas.includes(letra)) return;
+        if (letrasFallidas == "Ninguna") {
+            letrasFallidas = "";
         }
-    }, 800);
-}
-
-function presionarColor(color) {
-    if (bloqueado) return;
-
-    iluminarColor(color);
-    patronUsuario.push(color);
-
-    let index = patronUsuario.length - 1;
-
-    if (patronUsuario[index] !== patron[index]) {
-        document.getElementById("mensaje").innerText = "¡Te equivocaste! Inténtalo de nuevo.";
-        document.getElementById("mensaje").style.color = "#e74c3c";
-        document.getElementById("btn-iniciar").style.display = "inline-block";
-        document.getElementById("btn-iniciar").innerText = "Reintentar";
-        bloqueado = true;
-        return;
+        letrasFallidas += letra + " ";
+        document.getElementById("LetrasFallidas").innerText = letrasFallidas;
+        intentos--;
+        document.getElementById("Intentos").innerText = intentos;
     }
 
-    if (patronUsuario.length === patron.length) {
-        bloqueado = true;
-        setTimeout(siguienteRonda, 1000);
+    document.getElementById("Letra").value = "";
+
+    if (!palabraOculta.innerText.includes("_")) {
+        respuesta.innerText = "¡GANASTE!";
+        document.getElementById("formSiguienteSala").style.display = "block";
+    }
+
+    if (intentos <= 0 && palabraOculta.innerText.includes("_")) {
+        respuesta.innerText = "Te quedaste sin intentos.";
     }
 }
 
-// Crea una funcion que verifique que el boton que esta oculto en la sala 3 haya sido precionado y que luego haga apaarecer el boton de la siguiente sala y el mensaje de que se encontro el boton.
+// ==================== SALA 2: ACEITES ====================
+let aceiteElegido = 0;
+let ordenAceites = [];
+let ordenCorrecto = [1, 3, 2];
+
+function elegirAceite(numero) {
+    aceiteElegido = numero;
+    document.getElementById("aceite1").classList.remove("elegido");
+    document.getElementById("aceite2").classList.remove("elegido");
+    document.getElementById("aceite3").classList.remove("elegido");
+    document.getElementById("aceite" + numero).classList.add("elegido");
+}
+
+function ponerAceite(lugar) {
+    if (aceiteElegido == 0) return;
+
+    if (ordenAceites.length >= 3) return;
+
+    ordenAceites.push(aceiteElegido);
+    document.getElementById("mensajeSala2").innerText = "Aceite colocado en el lugar " + lugar + ".";
+    aceiteElegido = 0;
+
+    if (ordenAceites.length == 3) {
+        let correcto = true;
+
+        for (let i = 0; i < ordenCorrecto.length; i++) {
+            if (ordenAceites[i] != ordenCorrecto[i]) {
+                correcto = false;
+            }
+        }
+
+        if (correcto) {
+            document.getElementById("mensajeSala2").innerText = "¡Correcto! El Hombre de Hojalata recuperó su movimiento. Pista: CORAZÓN.";
+            document.getElementById("formSala3").style.display = "block";
+        } else {
+            document.getElementById("mensajeSala2").innerText = "El orden no es correcto. Volvé a intentarlo.";
+            ordenAceites = [];
+        }
+    }
+}
+
+// ==================== SALA 3: BUSCAR EN LA IMAGEN ====================
 function encontrarBotonSala3() {
-    document.getElementById("mensajeSala3").innerText = "¡FELICIDADES! ENCONTRASTE EL BOTÓN OCULTO";
-    document.getElementById("mensajeSala3").style.color = "#27ae60";
+    document.getElementById("mensajeSala3").innerText = "¡Encontraste las zapatillas! Pista: ROJO.";
     document.getElementById("formSiguienteSala4").style.display = "block";
 }
 
+// ==================== SALA 4: QUIZ ====================
+let respuestasCorrectas = 0;
+let preguntasRespondidas = 0;
 
+function responderQuiz(boton, correcto) {
+    if (boton.parentElement.classList.contains("respondida")) return;
+
+    boton.parentElement.classList.add("respondida");
+    preguntasRespondidas++;
+
+    if (correcto) {
+        respuestasCorrectas++;
+        boton.classList.add("correcto");
+    } else {
+        boton.classList.add("incorrecto");
+    }
+
+    if (preguntasRespondidas == 5) {
+        if (respuestasCorrectas >= 4) {
+            document.getElementById("resultadoQuiz").innerText = "¡Excelente! Pista: VALOR.";
+            document.getElementById("formSala5").style.display = "block";
+        } else {
+            document.getElementById("resultadoQuiz").innerText = "Necesitás al menos 4 respuestas correctas. Volvé a intentarlo recargando la sala.";
+        }
+    }
+}
+
+// ==================== SALA 5: FINAL ====================
+function resolverFinal() {
+    let respuesta = document.getElementById("respuestaFinal").value.toUpperCase();
+    let mensaje = document.getElementById("mensajeFinal");
+
+    if (respuesta == "ZAPATILLAS ROJAS" || respuesta == "ZAPATILLASROJAS" || respuesta == "ZAPATILLAS" || respuesta == "ZAPATILLA" || respuesta == "LAS ZAPATILLAS" || respuesta == "LAS ZAPATILLAS ROJAS") {
+        mensaje.innerText = "¡LO LOGRASTE! Las zapatillas te llevan de vuelta a casa. Encontraste al Mago y escapaste de la Bruja.";
+        document.getElementById("volverInicio").style.display = "inline-block";
+    } else {
+        mensaje.innerText = "No es la respuesta. Recordá todas las pistas de las salas anteriores.";
+    }
+}

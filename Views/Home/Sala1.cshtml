@@ -1,27 +1,23 @@
-<div class="Sala1">
-    <h1>Bienvenido a la Sala 1</h1>
-    <p>En el maravilloso mundo de Oz, hay muchos personajes valientes y con un gran corazón. Uno de ellos es conocido por su valentía y su corazón valiente. ¿Sabes quién es?</p>
-<div>
+<div class="sala sala1">
+    <div class="caja juego">
+        <p class="subtitulo">SALA 1 · ESPANTAPÁJAROS</p>
+        <h1>El acertijo del Espantapájaros</h1>
+        <p>El Espantapájaros está frente a una puerta cerrada.</p>
+        <p>Para abrirla tenés que descubrir la palabra secreta antes de quedarte sin intentos.</p>
 
-<section class="text-center">
-    <div>
-        <h1 class="display-4">EL AHORCADO</h1>
-        <h3>Se va a elegir aleatoriamente una palabra. Hay un guión por cada letra de la palabra secreta. Ingresá una letra que creas que está en la palabra secreta y el sistema te va a decir si está o no. Adiviná la palabra antes de los 10 intentos (fallidos).</h3>
-    </div>
-    <div>
-        <input type="hidden" id="Palabra" value="@ViewBag.Palabra"></input>
-        <p>Letras fallidas:</p>
-        <div id ="LetrasFallidas"></div>
-        <p>Intentos faltantes:</p>
-        <div id ="Intentos">10</div>
+        <input type="hidden" id="Palabra" value="@ViewBag.Palabra" />
         <h2 id="PalabraOculta">@ViewBag.PalabraOculta</h2>
-        <input type ="text" id ="Letra" maxlength ="1">
-        <button onclick="arriesgarLetra()">Arriesgar</button>
-        <div id="Rta"></div>
 
-        //Crear un formulario oculto que se muestre cuando el usuario complete la sala 2, y que al hacer click en el boton, llame a la accion AvanzarSala del controlador Home, y que tenga un boton con el texto "Ir a la Sala 2", y que tenga un estilo de color verde.
-        <form id="formSiguienteSala" action='@Url.Action("AvanzarSala", "Home")' method="POST" onsubmit="return validarSala1()" style="display: none;">
-            <button type="submit" style="background-color: #27ae60; color: white;">Ir a la Sala 2</button>
+        <p>Letras fallidas:</p>
+        <div id="LetrasFallidas" class="dato">Ninguna</div>
+        <p>Intentos restantes: <span id="Intentos">10</span></p>
+
+        <input type="text" id="Letra" maxlength="1" placeholder="Letra" />
+        <button class="boton" type="button" onclick="arriesgarLetra()">Arriesgar</button>
+        <p id="Rta" class="mensaje"></p>
+
+        <form id="formSiguienteSala" action='@Url.Action("AvanzarSala", "Home")' method="POST" style="display:none;">
+            <button class="boton" type="submit">Continuar</button>
         </form>
     </div>
-</section>
+</div>

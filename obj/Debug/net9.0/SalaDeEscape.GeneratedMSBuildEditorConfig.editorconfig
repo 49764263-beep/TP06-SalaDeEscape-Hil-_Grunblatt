@@ -20,8 +20,32 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[Z:/2026/Programación/TP-06/SalaDeEscape/Views/Home/Historia2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIaXN0b3JpYTIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2026/Programación/TP-06/SalaDeEscape/Views/Home/Historia3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIaXN0b3JpYTMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2026/Programación/TP-06/SalaDeEscape/Views/Home/Historia4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIaXN0b3JpYTQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2026/Programación/TP-06/SalaDeEscape/Views/Home/Historia5.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIaXN0b3JpYTUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2026/Programación/TP-06/SalaDeEscape/Views/Home/HistoriaInicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIaXN0b3JpYUluaWNpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [Z:/2026/Programación/TP-06/SalaDeEscape/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2026/Programación/TP-06/SalaDeEscape/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [Z:/2026/Programación/TP-06/SalaDeEscape/Views/Home/Privacy.cshtml]
@@ -46,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [Z:/2026/Programación/TP-06/SalaDeEscape/Views/Home/Sala5.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYWxhNS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2026/Programación/TP-06/SalaDeEscape/Views/Home/Victoria.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWN0b3JpYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [Z:/2026/Programación/TP-06/SalaDeEscape/Views/Shared/Error.cshtml]

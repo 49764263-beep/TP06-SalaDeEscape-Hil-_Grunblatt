@@ -1,9 +1,8 @@
-﻿<div class="Index">
-    <h1>Bienvenido al maravilloso Mundo de Oz</h1>
-    <p>Ingresa tu nombre de usuario para comenzar</p>
-    <form action='@Url.Action("VerificarDatos", "Home")' method='POST'>
-        <input type="hidden" name="IDPartida" value="0" />
-        <input type="text" placeholder="Nombre de usuario" name="NombreUsuario" required/>
-        <button type="submit">Iniciar Sesión</button>
-    </form>
+﻿<div class="pantalla bienvenida">
+    <div class="caja">
+        <p class="subtitulo">UNA AVENTURA EN</p>
+        <h1>EL MARAVILLOSO<br />MUNDO DE OZ</h1>
+        <p>Un tornado te ha llevado lejos de casa. Para volver, vas a tener que atravesar las cinco salas de Oz.</p>
+        <a class="boton" href="@Url.Action("Login", "Home")">Comenzar aventura</a>
+    </div>
 </div>

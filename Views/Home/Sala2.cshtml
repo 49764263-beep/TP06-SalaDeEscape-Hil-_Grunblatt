@@ -1,21 +1,24 @@
-<div class="text-center">
-    <h1>Sala 2: Simón Dice</h1>
-    <h3>Memoriza la secuencia hasta alcanzar 10 colores.</h3>
+<div class="sala sala2">
+    <div class="caja juego">
+        <p class="subtitulo">SALA 2 · HOMBRE DE HOJALATA</p>
+        <h1>Los aceites de Oz</h1>
+        <p>Colocá cada aceite en el lugar correcto para reparar al Hombre de Hojalata.</p>
 
-    <div id="pantalla-nivel">Secuencia actual: <span id="contador">0</span> / 10</div>
+        <div class="aceites">
+            <div class="aceite" id="aceite1" onclick="elegirAceite(1)">Aceite de corazón</div>
+            <div class="aceite" id="aceite2" onclick="elegirAceite(2)">Aceite de valor</div>
+            <div class="aceite" id="aceite3" onclick="elegirAceite(3)">Aceite de inteligencia</div>
+        </div>
 
-    <div class="simon-container">
-        <div class="btn-simon verde" id="verde" onclick="presionarColor('verde')"></div>
-        <div class="btn-simon rojo" id="rojo" onclick="presionarColor('rojo')"></div>
-        <div class="btn-simon amarillo" id="amarillo" onclick="presionarColor('amarillo')"></div>
-        <div class="btn-simon azul" id="azul" onclick="presionarColor('azul')"></div>
+        <div class="lugares">
+            <button type="button" onclick="ponerAceite(1)">Lugar 1</button>
+            <button type="button" onclick="ponerAceite(2)">Lugar 2</button>
+            <button type="button" onclick="ponerAceite(3)">Lugar 3</button>
+        </div>
+
+        <p id="mensajeSala2" class="mensaje"></p>
+        <form id="formSala3" action='@Url.Action("AvanzarSala", "Home")' method="POST" style="display:none;">
+            <button class="boton" type="submit">Continuar</button>
+        </form>
     </div>
-
-    <button id="btn-iniciar" onclick="iniciarJuego()">Comenzar Juego</button>
-    <div id="mensaje"></div>
-
-    //Crear un formulario oculto que se muestre cuando el usuario complete la sala 2, y que al hacer click en el boton, llame a la accion AvanzarSala del controlador Home, y que tenga un boton con el texto "Ir a la Sala 3", y que tenga un estilo de color verde.
-    <form id="formSala3" action='@Url.Action("AvanzarSala", "Home")' method="POST">
-        <button type="submit" style="background-color: #27ae60;" >Ir a la Sala 3</button>
-    </form>
 </div>

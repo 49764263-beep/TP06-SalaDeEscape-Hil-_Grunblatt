@@ -1,42 +1,21 @@
-<h1>V o F</h1>
-<div>
-    <h2>El tornado llevó a Dorothy directamente hasta Ciudad Esmeralda.</h2>
-    <button>Verdadero</button>
-    <button>Falso</button>
-</div>
+<div class="sala sala5">
+    <div class="caja juego">
+        <p class="subtitulo">SALA 5 · EL DESAFÍO FINAL</p>
+        <h1>La última puerta</h1>
+        <p>La Bruja te muestra cuatro pistas que conseguiste durante la aventura:</p>
+        <div class="pistas">
+            <p><b>Espantapájaros:</b> te recordó que necesitás usar tu cabeza.</p>
+            <p><b>Hombre de Hojalata:</b> te recordó qué es lo que mueve su corazón.</p>
+            <p><b>Dorothy:</b> te mostró el color de su objeto más importante.</p>
+            <p><b>León:</b> te recordó la cualidad que necesitás para enfrentarte a la Bruja.</p>
+        </div>
 
-<div>
-    <h2>Las zapatillas que recibe Dorothy al llegar a Oz pertenecían originalmente a la Bruja Malvada del Este.</h2>
-    <button>Verdadero</button>
-    <button>Falso</button>
-</div>
+        <h2>¿Qué objeto puede llevarte de vuelta a casa?</h2>
+        <p>Escribí la respuesta completa.</p>
+        <input type="text" id="respuestaFinal" placeholder="Tu respuesta" />
+        <button class="boton" type="button" onclick="resolverFinal()">Escapar</button>
+        <p id="mensajeFinal" class="mensaje"></p>
 
-<div>
-    <h2>El Espantapájaros ya tenía un cerebro, pero no confiaba en su propia inteligencia.</h2>
-    <button>Verdadero</button>
-    <button>Falso</button>
-</div>
-
-<div>
-    <h2>El León Cobarde es el único de los tres compañeros de Dorothy que no recibe exactamente lo que buscaba del Mago.</h2>
-    <button>Verdadero</button>
-    <button>Falso</button>
-</div>
-
-<div>
-    <h2>La Bruja Malvada del Oeste es quien envía a los monos voladores para detener a Dorothy.</h2>
-    <button>Verdadero</button>
-    <button>Falso</button>
-</div>
-
-<div>
-    <h2>La casa de Dorothy cae accidentalmente sobre una de las brujas de Oz.</h2>
-    <button>Verdadero</button>
-    <button>Falso</button>
-</div>
-
-<div>
-    <h2>El Mago de Oz realmente tenía poderes mágicos, pero decidió ocultárselos a Dorothy.</h2>
-    <button>Verdadero</button>
-    <button>Falso</button>
+        <a id="volverInicio" class="boton" style="display:none;" href='@Url.Action("CerrarSesion", "Home")'>Volver a casa</a>
+    </div>
 </div>
