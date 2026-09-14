@@ -224,6 +224,11 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Victoria()
+    {
+        return View();
+    } 
+
     private bool PuedeEntrar(int sala)
     {
         int salaActual = HttpContext.Session.GetInt32("SalaActual") ?? 1;
