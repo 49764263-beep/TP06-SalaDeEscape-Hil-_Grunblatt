@@ -4,20 +4,19 @@
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: fantasy, sans-serif;
     background: #17132b;
-    color: white;
+    color: rgb(255, 255, 255);
 }
+
 
 a {
     text-decoration: none;
 }
 
-.pantalla,
-.historia,
-.sala {
+.pantalla, .historia, .sala {
     min-height: 100vh;
-    padding: 60px 20px;
+    padding: 3.75em 1.25em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,46 +25,50 @@ a {
 }
 
 .bienvenida {
-    background-image: linear-gradient(rgba(20, 15, 45, .70), rgba(20, 15, 45, .80)), url('/images/oz-bienvenida.jpg');
+    background-image: url('/img/Bienvenido.jpg');
+}
+
+.bienvenida p, .bienvenida h1, .login p, .login h1 {
+    color: #fff;
+    text-shadow: 0 0 0.625em #000;
+    text-decoration: underline;
 }
 
 .login {
-    background-image: linear-gradient(rgba(20, 15, 45, .75), rgba(20, 15, 45, .85)), url('/images/oz-login.jpg');
+    background-image: url('/img/Login.jpg');
 }
 
-.sala1 { background: #33265b; }
-.sala2 { background: #254653; }
-.sala3 { background: #285239; }
-.sala4 { background: #59462a; }
-.sala5 { background: #391d45; }
+.sala1 { background-image: url('/img/Espantapajaros.jfif'); }
+.sala2 { background-image: url('/img/Hojalata.jfif'); }
+.sala3 { background: #17132b; }
+.sala4 { background-image: url('/img/Leon.jpg');}
+.sala5 { background-image: url('/img/Puerta.png');}
 
 .historia {
-    background: #211b3b;
+    background-image: url('/img/CaminoAmarillo.jfif');
 }
 
 .caja {
     width: 90%;
-    max-width: 850px;
-    padding: 45px;
-    border-radius: 18px;
-    background: rgba(15, 12, 30, .90);
+    max-width: 53.125em;
+    padding: 2.8125em;
+    border-radius: 1.125em;
     text-align: center;
-    box-shadow: 0 10px 35px rgba(0,0,0,.35);
 }
 
 .juego {
-    max-width: 950px;
+    max-width: 59.375em;
 }
 
 .subtitulo {
-    letter-spacing: 3px;
-    font-size: 14px;
+    letter-spacing: 0.1875em;
+    font-size: 0.875em;
     font-weight: bold;
 }
 
 h1 {
-    font-size: 42px;
-    margin: 15px 0 25px;
+    font-size: 2.625em;
+    margin: 0.9375em 0 1.5625em;
 }
 
 h2 {
@@ -76,80 +79,78 @@ p {
     line-height: 1.6;
 }
 
-.boton,
-button {
+.boton, button {
     display: inline-block;
-    margin: 10px 5px;
-    padding: 12px 24px;
+    margin: 0.625em 0.3125em;
+    padding: 0.75em 1.5em;
     border: 0;
-    border-radius: 8px;
+    border-radius: 0.5em;
     background: #d5ad3d;
     color: #17132b;
     font-weight: bold;
     cursor: pointer;
 }
 
-.boton:hover,
-button:hover {
+.boton:hover, button:hover {
     opacity: .85;
 }
 
 input[type="text"] {
-    width: 260px;
+    width: 16.25em;
     max-width: 90%;
-    padding: 12px;
-    border: 2px solid #d5ad3d;
-    border-radius: 8px;
-    margin: 8px;
+    padding: 0.75em;
+    border: 0.125em solid #d5ad3d;
+    border-radius: 0.5em;
+    margin: 0.5em;
 }
 
 #PalabraOculta {
-    letter-spacing: 10px;
-    font-size: 35px;
+    letter-spacing: 0.625em;
+    font-size: 2.1875em;
 }
 
 .dato {
-    margin: 10px auto 20px;
-    min-height: 25px;
+    margin: 0.625em auto 1.25em;
+    min-height: 1.5625em;
 }
 
 .mensaje {
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: bold;
-    min-height: 30px;
+    min-height: 1.875em;
 }
 
 .aceites {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin: 25px 0;
+    gap: 0.9375em;
+    margin: 1.5625em 0;
 }
 
 .aceite {
-    width: 190px;
-    padding: 25px 10px;
-    border-radius: 12px;
+    width: 11.875em;
+    padding: 1.5625em 0.625em;
+    border-radius: 0.75em;
     background: #6d8f9d;
     cursor: pointer;
 }
 
 .aceite.elegido {
-    border: 4px solid #d5ad3d;
+    border: 0.25em solid #d5ad3d;
 }
 
 .lugares {
-    margin: 20px 0;
+    margin: 1.25em 0;
 }
 
 .imagen-oz {
     width: 100%;
-    height: 420px;
-    margin: 25px auto;
+    height: 26.25em;
+    margin: 1.5625em auto;
     position: relative;
-    border-radius: 15px;
-    background-image: url('/images/oz-sala3.jpg');
+    border-radius: 0.9375em;
+    background-image: url('/img/imagenSala3.png');
     background-size: cover;
     background-position: center;
 }
@@ -162,9 +163,9 @@ input[type="text"] {
 }
 
 .pregunta {
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 10px;
+    padding: 0.9375em;
+    margin: 0.9375em 0;
+    border-radius: 0.625em;
     background: rgba(255,255,255,.07);
 }
 
@@ -188,23 +189,25 @@ input[type="text"] {
 
 .pistas {
     text-align: left;
-    padding: 15px 25px;
-    margin: 20px auto;
-    max-width: 650px;
-    border-left: 4px solid #d5ad3d;
+    padding: 0.9375em 1.5625em;
+    margin: 1.25em auto;
+    max-width: 40.625em;
+    border-left: 0.25em solid #d5ad3d;
     background: rgba(255,255,255,.06);
 }
 
-@media (max-width: 600px) {
-    h1 {
-        font-size: 30px;
-    }
 
-    .caja {
-        padding: 25px;
-    }
+.victoria {
+    background-image: url('/img/Kansas.webp');
+    background-size: cover;
+    background-position: center;
+}
 
-    .imagen-oz {
-        height: 300px;
-    }
+.imagen-victoria {
+    width: 100%;
+    max-width: 43.75em;
+    max-height: 25em;
+    object-fit: cover;
+    border-radius: 0.9375em;
+    margin-bottom: 1.25em;
 }

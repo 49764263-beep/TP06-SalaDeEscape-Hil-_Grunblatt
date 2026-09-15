@@ -1,21 +1,29 @@
-<div class="sala sala5">
-    <div class="caja juego">
-        <p class="subtitulo">SALA 5 · EL DESAFÍO FINAL</p>
-        <h1>La última puerta</h1>
-        <p>La Bruja te muestra cuatro pistas que conseguiste durante la aventura:</p>
-        <div class="pistas">
-            <p><b>Espantapájaros:</b> te recordó que necesitás usar tu cabeza.</p>
-            <p><b>Hombre de Hojalata:</b> te recordó qué es lo que mueve su corazón.</p>
-            <p><b>Dorothy:</b> te mostró el color de su objeto más importante.</p>
-            <p><b>León:</b> te recordó la cualidad que necesitás para enfrentarte a la Bruja.</p>
-        </div>
+<div class="sala sala5"> <div class="caja juego"> <p class="subtitulo">SALA 5 · EL DESAFÍO FINAL</p>
 
-        <h2>¿Qué objeto puede llevarte de vuelta a casa?</h2>
-        <p>Escribí la respuesta completa.</p>
-        <input type="text" id="respuestaFinal" placeholder="Tu respuesta" />
-        <button class="boton" type="button" onclick="resolverFinal()">Escapar</button>
-        <p id="mensajeFinal" class="mensaje"></p>
+    <h1>La última puerta</h1>
+    <p>La Bruja te muestra cuatro pistas que conseguiste durante la aventura:</p>
 
-        <a id="volverInicio" class="boton" style="display:none;" href='@Url.Action("Victoria", "Home")'>Volver a casa</a>
+    <div class="pistas">
+        <p>Espantapájaros: te recordó que necesitás usar tu cabeza.</p>
+        <p>Hombre de Hojalata: te recordó qué es lo que mueve su corazón.</p>
+        <p>Dorothy: te mostró el color de su objeto más importante.</p>
+        <p>León: te recordó la cualidad que necesitás para enfrentarte a la Bruja.</p>
     </div>
+
+    <h2>¿Qué objeto puede llevarte de vuelta a casa?</h2>
+    <p>Escribí la respuesta completa.</p>
+
+    <input type="text" id="respuestaFinal" placeholder="Tu respuesta" />
+
+    <button class="boton" type="button" onclick="resolverFinal()">
+        Escapar
+    </button>
+
+    <p id="mensajeFinal" class="mensaje"></p>
+
+    <form id="formVictoria" method="post" action="@Url.Action("TerminarSala5", "Home")" style="display:none;">
+        <button class="boton" type="submit">
+            Volver a casa
+        </button>
+    </form>
 </div>

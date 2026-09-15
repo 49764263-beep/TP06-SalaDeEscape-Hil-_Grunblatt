@@ -20,12 +20,10 @@ public class Palabras
     public string PalabraAGuion(string palabra)
     {
         string palabraConGuiones = "";
-
         for (int i = 0; i < palabra.Length; i++)
         {
             palabraConGuiones = palabraConGuiones + "_";
         }
-
         return palabraConGuiones;
     }
 }

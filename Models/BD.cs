@@ -15,20 +15,17 @@ public class BD
     public List<string> ListaPalabras()
     {
         List<string> palabras = new List<string>();
-
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = "SELECT Palabra FROM Palabras";
             palabras = connection.Query<string>(query).ToList();
         }
-
         return palabras;
     }
 
     public void AgregarPalabra(string palabra)
     {
         string query = "INSERT INTO Palabras (Palabra) VALUES (@Palabra)";
-
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             connection.Execute(query, new { Palabra = palabra });

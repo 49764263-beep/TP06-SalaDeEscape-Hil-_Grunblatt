@@ -1,11 +1,23 @@
-<div class="historia">
+<div class="historia"> 
     <div class="caja">
-        <p class="subtitulo">ENTRADA A LA SALA 4 · LEÓN COBARDE</p>
-        <h1>Una voz sale desde detrás de una cortina...</h1>
-        <p>El León Cobarde aparece y te dice que para llegar al castillo del Mago vas a necesitar demostrar cuánto recordás de tu viaje por Oz.</p>
-        <p>Respondé correctamente el quiz y recibirás la última pista.</p>
-        <form action='@Url.Action("ComenzarSala5", "Home")' method="POST">
-            <button class="boton" type="submit">Entrar a la Sala 5</button>
+        <p class="subtitulo">SALA 5 · EL DESAFÍO FINAL</p>
+        <h1>El camino de regreso</h1>
+        <p> Después de superar todos los desafíos, finalmente llegaste al último rincón de Oz.</p>
+        <p>Frente a vos aparece la Bruja del Oeste. Parece que sabe que estuviste siguiendo sus pistas durante toda la aventura.</p>
+        <p>La Bruja te muestra las pistas que encontraste en las salas anteriores. Todas parecen estar relacionadas...</p>
+
+        <div class="pistas">
+            <p>Espantapájaros: usar tu cabeza.</p>
+            <p>Hombre de Hojalata: aquello que mueve su corazón.</p>
+            <p>Dorothy: el color de su objeto más importante.</p>
+            <p>León: el valor necesario para enfrentarte a la Bruja.</p>
+        </div>
+
+        <p>Solo una respuesta puede abrir la última puerta y llevarte de vuelta a casa.</p>
+        <h2>¿Estás listo para el desafío final?</h2>
+        
+        <form method="post" action="@Url.Action("ComenzarSala5", "Home")">
+            <button class="boton" type="submit">Comenzar desafío final</button>
         </form>
     </div>
 </div>
