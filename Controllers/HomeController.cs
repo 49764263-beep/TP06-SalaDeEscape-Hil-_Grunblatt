@@ -92,13 +92,16 @@ public class HomeController : Controller
         {
             return RedirectToAction("Juego");
         }
-        Palabras palabra = new Palabras();
-        if (HttpContext.Session.GetString("PalabraSala1") == null)
+
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("PalabraSala1")))
         {
-            HttpContext.Session.SetString("PalabraSala1", "CEREBRO");
+            Palabras palabras = new Palabras();
+            string palabraRandom = palabras.ObtenerPalabra();
+            HttpContext.Session.SetString("PalabraSala1", palabraRandom.ToUpperInvariant());
         }
+
         ViewBag.Palabra = HttpContext.Session.GetString("PalabraSala1");
-        ViewBag.PalabraOculta = palabra.PalabraAGuion(ViewBag.Palabra);
+        ViewBag.PalabraOculta = new Palabras().PalabraAGuion(ViewBag.Palabra);
         return View();
     }
 

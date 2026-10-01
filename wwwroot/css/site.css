@@ -7,6 +7,7 @@ body {
     font-family: fantasy, sans-serif;
     background: #17132b;
     color: rgb(255, 255, 255);
+    -webkit-text-stroke-color: 0 0 0.1500em #000;
 }
 
 
@@ -30,8 +31,7 @@ a {
 
 .bienvenida p, .bienvenida h1, .login p, .login h1 {
     color: #fff;
-    text-shadow: 0 0 0.625em #000;
-    text-decoration: underline;
+    text-shadow: 0 0 0.1500em #000;
 }
 
 .login {
@@ -92,6 +92,22 @@ p {
 }
 
 .boton:hover, button:hover {
+    opacity: .85;
+}
+
+.cerrar {
+    position: absolute;
+    top: 1.25em;
+    right: 1.25em;
+    padding: 0.625em 1.25em;
+    border-radius: 0.5em;
+    background: #d5ad3d;
+    color: #17132b;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar:hover {
     opacity: .85;
 }
 
@@ -160,6 +176,7 @@ input[type="text"] {
     top: 65%;
     left: 73%;
     opacity: .08;
+    cursor: auto;
 }
 
 .pregunta {
