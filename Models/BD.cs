@@ -2,7 +2,7 @@ using Microsoft.Data.SqlClient;
 using Dapper;
 
 namespace SalaDeEscape.Models;
-
+// comentario
 public class BD
 {
     private string _connectionString;
